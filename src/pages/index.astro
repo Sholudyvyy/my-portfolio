@@ -1,5 +1,7 @@
 ---
-
+// Image optimization
+import { Image } from "astro:assets";
+import avatarImage from "../assets/avatar.webp";
 ---
 
 <html lang="en">
@@ -66,7 +68,13 @@
     </style>
   </head>
   <body>
-    <img src="/avatar.jpg" alt="Stanislav Hohulia" class="avatar" />
+    <Image
+      src={avatarImage}
+      alt="Stanislav Hohulia"
+      class="avatar"
+      width={160}
+      height={160}
+    />
     <h1>Stanislav Hohulia</h1>
     <p class="highlight">Frontend Developer | Moving towards Fullstack</p>
     <p>2 year experience</p>
